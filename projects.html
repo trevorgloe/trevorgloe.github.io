@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -88,8 +90,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												<p><span class="image left"><img src="images/pic01.jpg" alt="" /></span>The attitude determination and control system (ADCS) is historically a difficult system to design and implement. While, the Cal Poly Cubesat Laboratory has historically used simplified, passive systems, increasing mission complexity has called for a more rebust design framework for the CPCL ADCS.</p>
 												<p>This project involved working off of the MATLAB / Simulink framework developed by Liam Bruno as part of his masters thesis in aerospace engineering, which can be found <a href="https://digitalcommons.calpoly.edu/theses/2288/">here</a>. The code features an adjustable orbit propogator via the equation</span></p>
 												<math display="block">
-													a=<mfrac><mn>&#956</mn><msup><mi>|R|</mi><mn>3</mn></msup></mfrac>R
+													a=<mfrac><mn>-&#956</mn><msup><mi>|R|</mi><mn>3</mn></msup></mfrac>R
 												</math>
+												a simulation of the rigid-body dynamics of cubesat via the Euler equation
+												<math display="block">
+
+												</math>
+												a P.I.D. controller and tuner as well as several control modes. 
 												<a href="#" class="button small">Repository</a>
 									<section>
 
