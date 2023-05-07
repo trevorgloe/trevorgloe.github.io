@@ -84,17 +84,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												<p>My part in the project was to assist in testing the star tracker's and verifying the attitude algorithms implemented. This involved writting python code to visualize and compare quaternion outputs from the software as well as checking the code's implementation of QUEST (the chosen algorithm to generate a quaternion). Quaternions are 4-dimentional numbers that represent a 3-dimensional rotation so visualizing them has to be done carefully. To do this, I utilized mplot3d (part of matplotlib) to visualize 3d vectors rotated by the quaternion, as well as computing quaternions from the same data using different algorithms, and comparing the hyperspherical distance between them. This must be done carefully as there are infinitely many paths along a hypersphere between 2 quaternions. The TRIAD algorithm was used to generate test quaternions from the same data. I also worked to verify the spherical projection being done in the star tracker software via a 3-dimensional visualization of the vectors and projected camera image.</span></p>
 												<p>Hyperspherical distance was computed via the following</p>
 												<pre><code>def hyp_arc_dist(q1,q2):
-													# computes the hyperspherical arc-length (great circle distance) between quaternion 1 and 2 (given by q1 and q2)
-													# quaternions are assumed to be given in the (real,i,j,k) convension
-												
-													# compute cosine of angle between then
-													cospsi = q1[0]*q2[0]+q1[1]*q2[1]+q1[2]*q2[2]+q1[3]*q2[3]
-												
-													# obtain angle
-													psi = math.acos(cospsi)
-												
-													# dont need to scale by the radius because these are normalize (radius 1)
-													return 1*psi</code></pre>
+	# computes the hyperspherical arc-length (great circle distance) between quaternion 1 and 2 (given by q1 and q2)
+	# quaternions are assumed to be given in the (real,i,j,k) convension
+
+	# compute cosine of angle between then
+	cospsi = q1[0]*q2[0]+q1[1]*q2[1]+q1[2]*q2[2]+q1[3]*q2[3]
+
+	# obtain angle
+	psi = math.acos(cospsi)
+
+	# dont need to scale by the radius because these are normalize (radius 1)
+	return 1*psi</code></pre>
 												<p>This work lead to a published paper in the the American Institute of Aeronautics and Astronautics (AIAA) Journal, which can be found <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2022-0520">here</a>.</span></p>
 									<section>
 
