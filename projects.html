@@ -174,6 +174,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												F(t)= C_d(v+v_w)^2 + mg(\sin(\phi)+C_r) + m_e\frac{dv}{dt}, P(t)\leq CP+(P_{max}-CP)W_{exp}
 												\] There constraint equations mainly come from the Skiba model; a dynamic model for human bioenergy. In the model \(W'_{cap}\) and \(W'_{exp}\) represents the anerobic work capacity and anerobic work expended, respectively. \(F(t)\) is the force exerted by the rider, in terms of the air resistance (characterized by \(C_d\)), the gravitational force (characterized by the course grade, \(\phi\)) and the rider's mass \(m_e\). 
 												</p>
+												<p><span class="image left"><img src="images/wind_std_time_std.png" alt="" /></span>Since this was a highly nonlinear problem, the optimization was intractable in most numerical optimization schemes. The method of sequential quadratic programming for it's ability to solve nonlinear constrainted optimization problems. This method involves adding a quadratic programming subproblem to a normal Newton's method solver. This method could be easily impemented in matlab using the optimization toolbox. Once implemented, the model was used to optimize over several test courses (pictured above). </p>
 												<a href="#" class="button small">Repository</a>
 									<section>
 
